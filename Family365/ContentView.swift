@@ -16,8 +16,9 @@ struct loginView: View {
     
     var body: some View {
         
+        ScrollView (showsIndicators: false){
         // The View
-        VStack(spacing : 2) {
+        VStack(alignment: .center, spacing : 0) {
             
             // App Image
             Image("icon")
@@ -25,14 +26,19 @@ struct loginView: View {
                 .scaledToFit()
                 .frame(width: 200, height: 200)
             Text("Family365")
-                .font(.largeTitle)
+                .font(.system(size: 30, weight: .heavy, design: .default))
             
             // Title login
             Text("Login")
                 .font(.title).foregroundColor(.black)
-                .padding([.top, .bottom], 40)
+                .padding(.top, 30)
+                .padding(.bottom, 10)
             
             // Input textfield for login
+            Image("logicon")
+                .frame(maxWidth: 350, maxHeight: .infinity, alignment: .leading)
+                .listRowInsets(EdgeInsets())
+            
             TextField("Email", text: self.$email)
                 .padding()
                 .frame(width: 350, height: 60)
@@ -41,6 +47,13 @@ struct loginView: View {
                         .stroke(.black, lineWidth: 2)
                         .frame(width: 350, height: 60)
                 )
+                
+                .padding(.bottom, 25)
+
+            
+            Image("passLock")
+                .frame(maxWidth: 350, maxHeight: .infinity, alignment: .leading)
+                .listRowInsets(EdgeInsets())
             
             SecureField("Password", text: self.$password)
                 .padding()
@@ -50,8 +63,6 @@ struct loginView: View {
                         .stroke(.black, lineWidth: 2)
                         .frame(width: 350, height: 60)
                 )
-            
-                .padding(.top, 25)
             
             // Sign in - button
             Button(action: {}) {
@@ -63,9 +74,14 @@ struct loginView: View {
                     .background(.gray)
                     .cornerRadius(20.0)
             }
-            .padding(.top, 50)
-                        
             
+            .frame(width: 310, height: 60, alignment: .center)
+            .padding(.top, 45)
+            
+         }
+            
+        .padding([.top,.bottom], 70)
+                    
         }
     
         
