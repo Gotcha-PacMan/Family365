@@ -6,9 +6,16 @@
 //
 
 import SwiftUI
+import Firebase
+
 
 @main
 struct Family365App: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             loginView()

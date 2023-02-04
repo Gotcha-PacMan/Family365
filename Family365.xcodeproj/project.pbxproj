@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74135163298A3E47003AE97D /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74135162298A3E47003AE97D /* RegisterView.swift */; };
 		74811CD12987E3EA007CFEDE /* Family365App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74811CD02987E3EA007CFEDE /* Family365App.swift */; };
-		74811CD32987E3EA007CFEDE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74811CD22987E3EA007CFEDE /* ContentView.swift */; };
+		74811CD32987E3EA007CFEDE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74811CD22987E3EA007CFEDE /* LoginView.swift */; };
 		74811CD52987E3ED007CFEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74811CD42987E3ED007CFEDE /* Assets.xcassets */; };
 		74811CD82987E3ED007CFEDE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74811CD72987E3ED007CFEDE /* Preview Assets.xcassets */; };
 		74811CE22987E3ED007CFEDE /* Family365Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74811CE12987E3ED007CFEDE /* Family365Tests.swift */; };
 		74811CEC2987E3ED007CFEDE /* Family365UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74811CEB2987E3ED007CFEDE /* Family365UITests.swift */; };
 		74811CEE2987E3ED007CFEDE /* Family365UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74811CED2987E3ED007CFEDE /* Family365UITestsLaunchTests.swift */; };
+		74E1A193298CFD8B001242F7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 74E1A192298CFD8B001242F7 /* FirebaseAuth */; };
+		74E1A195298CFD8B001242F7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 74E1A194298CFD8B001242F7 /* FirebaseFirestore */; };
+		74E1A197298CFD8B001242F7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 74E1A196298CFD8B001242F7 /* FirebaseStorage */; };
+		74E1A199298CFE82001242F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74E1A198298CFE82001242F7 /* GoogleService-Info.plist */; };
+		74E1A19C298D0D35001242F7 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1A19B298D0D35001242F7 /* NavigationView.swift */; };
+		74F67CCD298D458B0095D13A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F67CCC298D458B0095D13A /* MapView.swift */; };
+		74F67CCF298D459B0095D13A /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F67CCE298D459B0095D13A /* ChatView.swift */; };
+		74F67CD1298D45AA0095D13A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F67CD0298D45AA0095D13A /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74135162298A3E47003AE97D /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		74811CCD2987E3EA007CFEDE /* Family365.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Family365.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74811CD02987E3EA007CFEDE /* Family365App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family365App.swift; sourceTree = "<group>"; };
-		74811CD22987E3EA007CFEDE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		74811CD22987E3EA007CFEDE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		74811CD42987E3ED007CFEDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74811CD72987E3ED007CFEDE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		74811CDD2987E3ED007CFEDE /* Family365Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Family365Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +54,11 @@
 		74811CE72987E3ED007CFEDE /* Family365UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Family365UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74811CEB2987E3ED007CFEDE /* Family365UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family365UITests.swift; sourceTree = "<group>"; };
 		74811CED2987E3ED007CFEDE /* Family365UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family365UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		74E1A198298CFE82001242F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		74E1A19B298D0D35001242F7 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		74F67CCC298D458B0095D13A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		74F67CCE298D459B0095D13A /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		74F67CD0298D45AA0095D13A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74E1A193298CFD8B001242F7 /* FirebaseAuth in Frameworks */,
+				74E1A195298CFD8B001242F7 /* FirebaseFirestore in Frameworks */,
+				74E1A197298CFD8B001242F7 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +89,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74135161298A3E18003AE97D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				74F67CD4298D46230095D13A /* LogView */,
+				74F67CD3298D460F0095D13A /* NavContent */,
+				74E1A19B298D0D35001242F7 /* NavigationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		74811CC42987E3EA007CFEDE = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +122,12 @@
 		74811CCF2987E3EA007CFEDE /* Family365 */ = {
 			isa = PBXGroup;
 			children = (
+				74E1A19E298D0D73001242F7 /* Manager */,
+				74E1A19D298D0D65001242F7 /* Chat */,
+				74135161298A3E18003AE97D /* Views */,
 				74811CD02987E3EA007CFEDE /* Family365App.swift */,
-				74811CD22987E3EA007CFEDE /* ContentView.swift */,
 				74811CD42987E3ED007CFEDE /* Assets.xcassets */,
+				74E1A198298CFE82001242F7 /* GoogleService-Info.plist */,
 				74811CD62987E3ED007CFEDE /* Preview Content */,
 			);
 			path = Family365;
@@ -127,6 +158,39 @@
 			path = Family365UITests;
 			sourceTree = "<group>";
 		};
+		74E1A19D298D0D65001242F7 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		74E1A19E298D0D73001242F7 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		74F67CD3298D460F0095D13A /* NavContent */ = {
+			isa = PBXGroup;
+			children = (
+				74F67CD0298D45AA0095D13A /* SettingsView.swift */,
+				74F67CCE298D459B0095D13A /* ChatView.swift */,
+				74F67CCC298D458B0095D13A /* MapView.swift */,
+			);
+			path = NavContent;
+			sourceTree = "<group>";
+		};
+		74F67CD4298D46230095D13A /* LogView */ = {
+			isa = PBXGroup;
+			children = (
+				74135162298A3E47003AE97D /* RegisterView.swift */,
+				74811CD22987E3EA007CFEDE /* LoginView.swift */,
+			);
+			path = LogView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +207,11 @@
 			dependencies = (
 			);
 			name = Family365;
+			packageProductDependencies = (
+				74E1A192298CFD8B001242F7 /* FirebaseAuth */,
+				74E1A194298CFD8B001242F7 /* FirebaseFirestore */,
+				74E1A196298CFD8B001242F7 /* FirebaseStorage */,
+			);
 			productName = Family365;
 			productReference = 74811CCD2987E3EA007CFEDE /* Family365.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +284,9 @@
 				Base,
 			);
 			mainGroup = 74811CC42987E3EA007CFEDE;
+			packageReferences = (
+				74E1A191298CFD8B001242F7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 74811CCE2987E3EA007CFEDE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +305,7 @@
 			files = (
 				74811CD82987E3ED007CFEDE /* Preview Assets.xcassets in Resources */,
 				74811CD52987E3ED007CFEDE /* Assets.xcassets in Resources */,
+				74E1A199298CFE82001242F7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +330,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74811CD32987E3EA007CFEDE /* ContentView.swift in Sources */,
+				74F67CD1298D45AA0095D13A /* SettingsView.swift in Sources */,
+				74135163298A3E47003AE97D /* RegisterView.swift in Sources */,
+				74811CD32987E3EA007CFEDE /* LoginView.swift in Sources */,
+				74F67CCD298D458B0095D13A /* MapView.swift in Sources */,
+				74E1A19C298D0D35001242F7 /* NavigationView.swift in Sources */,
+				74F67CCF298D459B0095D13A /* ChatView.swift in Sources */,
 				74811CD12987E3EA007CFEDE /* Family365App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,6 +667,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		74E1A191298CFD8B001242F7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		74E1A192298CFD8B001242F7 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74E1A191298CFD8B001242F7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		74E1A194298CFD8B001242F7 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74E1A191298CFD8B001242F7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		74E1A196298CFD8B001242F7 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74E1A191298CFD8B001242F7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 74811CC52987E3EA007CFEDE /* Project object */;
 }
