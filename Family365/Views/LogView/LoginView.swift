@@ -124,7 +124,7 @@ struct loginView: View {
                             .padding(.top, 20)
             
                 } //End VStack here!
-                .padding (.bottom, 45)
+                 .padding (.bottom, 45)
                        
                 //Look if user is logged in and trigger userIsLoggedIn
                 //if the user are logged in
@@ -140,7 +140,8 @@ struct loginView: View {
                 .padding([ .top,.bottom ], 40)
         }
             //End scrollwheel, here!
-           // .navigationBarHidden(true)
+           .navigationBarHidden(true)
+           .ignoresSafeArea()
         
        }
             //End NavigationView, here!

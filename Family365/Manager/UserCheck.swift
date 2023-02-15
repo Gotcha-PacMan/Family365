@@ -21,7 +21,7 @@ final class UserServiceAdapter: UserService {
             Users(lat: 59.31440989130573, lon: 18.019113055619165, name: "Henke", address: "Lovholmsgränd", isOpen: false),
             Users(lat: 59.31311524572036, lon: 18.021942997829456, name: "Lisa", address: "Lovholmsgränd", isOpen: false),
             Users(lat: 59.31222358210498, lon: 18.02340216911398, name: "Paul", address: "Lovholmsgränd", isOpen: false),
-            Users(lat: 59.3124592725995, lon: 18.02703479266922, name: "Fisk", address: "Lovholmsgränd", isOpen: false),
+            Users(lat: 59.3124592725995, lon: 18.02703479266922, name: "Fisk", address: "Lovholmsgränd", isOpen: true),
             Users(lat: 59.313811124004985, lon: 18.02819718209385, name: "Bjorn", address: "Lovholmsgränd", isOpen: false)
             
         ]

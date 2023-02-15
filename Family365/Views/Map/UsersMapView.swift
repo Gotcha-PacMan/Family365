@@ -73,8 +73,9 @@ final class UserMapViewCoordinate: NSObject, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let userAnnotations = annotation as? UsersAnnotationViewModel else { return MKPinAnnotationView() }
         
+        //Status
         let marker = MKMarkerAnnotationView()
-        marker.markerTintColor = userAnnotations.isOpen ? .blue : .gray
+        marker.markerTintColor = userAnnotations.isOpen ? .red : .gray
         marker.canShowCallout = true
         
         let calloutButton = UIButton(frame: CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0))
