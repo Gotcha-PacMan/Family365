@@ -13,23 +13,23 @@ struct NavigationView: View {
         
         TabView{
             
-            MapView()
+            MapView(viewModel: UserViewModel())
                 .tabItem() {
                     Image (systemName: "map.circle")
                     Text ("Map")
-                } //End MapView
+                }
             
             ChatView()
                 .tabItem() {
                     Image (systemName: "ellipsis.bubble.fill")
                     Text ("Chat")
-                } //End ChatView
+                }
             
             SettingsView()
                 .tabItem() {
                     Image (systemName: "slider.horizontal.3")
                     Text ("Settings")
-                } //End SettingsView
+                }
             
         } //End TabView
         

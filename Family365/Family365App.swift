@@ -19,6 +19,7 @@ struct Family365App: App {
     var body: some Scene {
         WindowGroup {
             loginView()
+            // NavigationView()
         }
     }
 }

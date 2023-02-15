@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		74135163298A3E47003AE97D /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74135162298A3E47003AE97D /* RegisterView.swift */; };
+		7417096C2994EDD1002B2CF0 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7417096B2994EDD1002B2CF0 /* Users.swift */; };
+		7417096F299D5952002B2CF0 /* UserCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7417096E299D5952002B2CF0 /* UserCheck.swift */; };
+		74170974299D5F05002B2CF0 /* UsersMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74170973299D5F05002B2CF0 /* UsersMapView.swift */; };
+		74170976299D6643002B2CF0 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74170975299D6643002B2CF0 /* UsersViewModel.swift */; };
 		74811CD12987E3EA007CFEDE /* Family365App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74811CD02987E3EA007CFEDE /* Family365App.swift */; };
 		74811CD32987E3EA007CFEDE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74811CD22987E3EA007CFEDE /* LoginView.swift */; };
 		74811CD52987E3ED007CFEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74811CD42987E3ED007CFEDE /* Assets.xcassets */; };
@@ -44,6 +48,10 @@
 
 /* Begin PBXFileReference section */
 		74135162298A3E47003AE97D /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		7417096B2994EDD1002B2CF0 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		7417096E299D5952002B2CF0 /* UserCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCheck.swift; sourceTree = "<group>"; };
+		74170973299D5F05002B2CF0 /* UsersMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersMapView.swift; sourceTree = "<group>"; };
+		74170975299D6643002B2CF0 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		74811CCD2987E3EA007CFEDE /* Family365.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Family365.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74811CD02987E3EA007CFEDE /* Family365App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family365App.swift; sourceTree = "<group>"; };
 		74811CD22987E3EA007CFEDE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -92,11 +100,39 @@
 		74135161298A3E18003AE97D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				74170972299D5EC2002B2CF0 /* TabBar */,
+				74170970299D5E89002B2CF0 /* Map */,
+				74F67CD0298D45AA0095D13A /* SettingsView.swift */,
+				74F67CCE298D459B0095D13A /* ChatView.swift */,
 				74F67CD4298D46230095D13A /* LogView */,
-				74F67CD3298D460F0095D13A /* NavContent */,
-				74E1A19B298D0D35001242F7 /* NavigationView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		741709642994E652002B2CF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7417096B2994EDD1002B2CF0 /* Users.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		74170970299D5E89002B2CF0 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				74F67CCC298D458B0095D13A /* MapView.swift */,
+				74170973299D5F05002B2CF0 /* UsersMapView.swift */,
+				74170975299D6643002B2CF0 /* UsersViewModel.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		74170972299D5EC2002B2CF0 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				74E1A19B298D0D35001242F7 /* NavigationView.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		74811CC42987E3EA007CFEDE = {
@@ -122,8 +158,8 @@
 		74811CCF2987E3EA007CFEDE /* Family365 */ = {
 			isa = PBXGroup;
 			children = (
+				741709642994E652002B2CF0 /* Models */,
 				74E1A19E298D0D73001242F7 /* Manager */,
-				74E1A19D298D0D65001242F7 /* Chat */,
 				74135161298A3E18003AE97D /* Views */,
 				74811CD02987E3EA007CFEDE /* Family365App.swift */,
 				74811CD42987E3ED007CFEDE /* Assets.xcassets */,
@@ -158,28 +194,12 @@
 			path = Family365UITests;
 			sourceTree = "<group>";
 		};
-		74E1A19D298D0D65001242F7 /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Chat;
-			sourceTree = "<group>";
-		};
 		74E1A19E298D0D73001242F7 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				7417096E299D5952002B2CF0 /* UserCheck.swift */,
 			);
 			path = Manager;
-			sourceTree = "<group>";
-		};
-		74F67CD3298D460F0095D13A /* NavContent */ = {
-			isa = PBXGroup;
-			children = (
-				74F67CD0298D45AA0095D13A /* SettingsView.swift */,
-				74F67CCE298D459B0095D13A /* ChatView.swift */,
-				74F67CCC298D458B0095D13A /* MapView.swift */,
-			);
-			path = NavContent;
 			sourceTree = "<group>";
 		};
 		74F67CD4298D46230095D13A /* LogView */ = {
@@ -330,13 +350,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74170976299D6643002B2CF0 /* UsersViewModel.swift in Sources */,
+				7417096C2994EDD1002B2CF0 /* Users.swift in Sources */,
 				74F67CD1298D45AA0095D13A /* SettingsView.swift in Sources */,
 				74135163298A3E47003AE97D /* RegisterView.swift in Sources */,
 				74811CD32987E3EA007CFEDE /* LoginView.swift in Sources */,
+				74170974299D5F05002B2CF0 /* UsersMapView.swift in Sources */,
 				74F67CCD298D458B0095D13A /* MapView.swift in Sources */,
 				74E1A19C298D0D35001242F7 /* NavigationView.swift in Sources */,
 				74F67CCF298D459B0095D13A /* ChatView.swift in Sources */,
 				74811CD12987E3EA007CFEDE /* Family365App.swift in Sources */,
+				7417096F299D5952002B2CF0 /* UserCheck.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +524,7 @@
 				DEVELOPMENT_TEAM = 32PU5X299W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs yout location to show it on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -531,6 +556,7 @@
 				DEVELOPMENT_TEAM = 32PU5X299W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs yout location to show it on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
