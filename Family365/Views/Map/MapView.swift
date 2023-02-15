@@ -13,8 +13,10 @@ struct MapView: View {
     
     var body: some View {
         
-        UsersMapView(annotations: viewModel.getUser())
-         
+        UsersMapView(annotations: viewModel.getUser()) {
+            annotation in
+            self.viewModel.tapped(annotation: annotation)
+        }
     }
     
 }

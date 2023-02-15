@@ -27,4 +27,12 @@ final class UserViewModel {
         }
     }
     
+    func tapped(annotation: UsersAnnotationViewModel){
+        
+        if annotation.isOpen {
+            // Call
+        } else {
+            // Taking to the chat
+        }
+    }
 }
