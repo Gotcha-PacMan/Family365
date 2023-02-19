@@ -10,16 +10,12 @@ import Firebase
 
 struct SettingsView: View {
     
-    
-    
     var body: some View {
         
         ZStack {
             
-            
-            
             // Logout - button
-            Button(action: {logoutCurrentUser()}) {
+            Button(action: logoutCurrentUser) {
                 Text("Logout")
                     .font(.headline)
                     .foregroundColor(.white)
@@ -32,25 +28,21 @@ struct SettingsView: View {
             .frame(width: 310, height: 60, alignment: .center)
             .padding(.top, 20)
             
-            
         } //End ZStack
-        
         
     }
     
     func logoutCurrentUser() {
         
-      /*  let firebaseAuth = Auth.auth()
+       // let firebaseAuth = Auth.auth()
+        
         do {
-          try firebaseAuth.signOut()
-        } catch let signOutError as NSError {
-          print("Error signing out: %@", signOutError)
-        } */
-        
-        do { try Auth.auth().signOut() }
-            catch { print("already logged out") } 
-        
+            try Auth.auth().signOut()
+        } catch {
+            print("Error signing out: \(error.localizedDescription)")
         }
+        
+    }
     
 }
 

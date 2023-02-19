@@ -85,7 +85,7 @@ final class UserMapViewCoordinate: NSObject, MKMapViewDelegate {
         let nameLabel = UILabel()
         nameLabel.text = userAnnotations.name
         marker.detailCalloutAccessoryView = nameLabel
-        
+            
         return marker
     }
     

@@ -11,15 +11,30 @@ import Firebase
 
 @main
 struct Family365App: App {
-    
+
     init() {
         FirebaseApp.configure()
     }
     
+    /* class FirebaseManager: NSObject {
+        static let shared = FirebaseManager()
+        
+        let auth: Auth
+        
+        override init() {
+            FirebaseApp.configure()
+            
+            self.auth = Auth.auth()
+            
+            super.init()
+        }
+        
+    } */
+    
+    
     var body: some Scene {
         WindowGroup {
             loginView()
-            // NavigationView()
         }
     }
 }

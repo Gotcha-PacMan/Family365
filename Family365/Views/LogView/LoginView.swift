@@ -9,27 +9,30 @@ import SwiftUI
 import Firebase
 
 struct loginView: View {
-    
+        
     // Propeties
     @State private var email = ""
     @State private var password = ""
     @State private var showDetail: Bool = false
     @State private var userIsLoggedIn = false
+    @State private var isPresented = false
     
+    //Custom Color
     struct CustomColor {
         static let myColor = Color("backLogin")
     }
     
     var body: some View {
+            
+            if userIsLoggedIn {
+                //If user is logged in, go to next view
+                NavigationView()
+            } else {
+                //If not stay on the same view
+                signInView
+            }
         
-        if userIsLoggedIn {
-            //If user is logged in, go to next view
-            NavigationView()
-        } else {
-            //If not stay on the same view
-            signInView
         }
-    }
     
     var signInView: some View {
         
@@ -107,19 +110,19 @@ struct loginView: View {
                                 .cornerRadius(20.0)
                         }
                         .frame(width: 310, height: 60, alignment: .center)
-                        .padding(.top, 30)
+                        .padding(.top, 40)
                             
                             // Register - button
-                            Button(action: {register()}) {
-                                Text("Register Account")
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                    .padding()
-                                    .frame(width: 300, height: 50)
-                                    .background(.gray)
-                                    .cornerRadius(20.0)
+                            Button("Register Account") {
+                                self.isPresented.toggle()
+                                   // .font(.headline)
+                                   // .foregroundColor(.white)
+                                   // .padding()
+                                   // .frame(width: 300, height: 50)
+                                   // .background(.gray)
+                                   // .cornerRadius(20.0)
                             }
-                        
+                            .fullScreenCover(isPresented: $isPresented, content: RegisterView.init)
                             .frame(width: 310, height: 60, alignment: .center)
                             .padding(.top, 20)
             
@@ -145,27 +148,30 @@ struct loginView: View {
         
        }
             //End NavigationView, here!
-       /* .ignoresSafeArea()
+       /*   .ignoresSafeArea()
             .navigationViewStyle(StackNavigationViewStyle())
     } */
     
+    @State var statusMessage = ""
+    
     func login() {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            if error != nil {
-                print(error!.localizedDescription)
+            if let error = error {
+                print("Failed login the user:", error)
+                self.statusMessage = "Failed login the user: \(error)"
+                return
             }
+            
+            print("Successfully logged in as user: \(result?.user.uid ?? "")")
+            
+            self.statusMessage = "Successfully logged in \(result?.user.uid ?? "")"
+            
         }
+        
     }
-    
-    func register() {
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            if error != nil {
-                print(error!.localizedDescription)
-            }
-        }
-    }
-    
+
 }
+
 
 
 struct LoginView_Previews: PreviewProvider {

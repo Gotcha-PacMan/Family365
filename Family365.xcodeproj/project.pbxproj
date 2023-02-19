@@ -12,6 +12,7 @@
 		7417096F299D5952002B2CF0 /* UserCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7417096E299D5952002B2CF0 /* UserCheck.swift */; };
 		74170974299D5F05002B2CF0 /* UsersMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74170973299D5F05002B2CF0 /* UsersMapView.swift */; };
 		74170976299D6643002B2CF0 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74170975299D6643002B2CF0 /* UsersViewModel.swift */; };
+		7466C20F29A26795005F006A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7466C20E29A26795005F006A /* GoogleService-Info.plist */; };
 		74811CD12987E3EA007CFEDE /* Family365App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74811CD02987E3EA007CFEDE /* Family365App.swift */; };
 		74811CD32987E3EA007CFEDE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74811CD22987E3EA007CFEDE /* LoginView.swift */; };
 		74811CD52987E3ED007CFEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74811CD42987E3ED007CFEDE /* Assets.xcassets */; };
@@ -22,7 +23,6 @@
 		74E1A193298CFD8B001242F7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 74E1A192298CFD8B001242F7 /* FirebaseAuth */; };
 		74E1A195298CFD8B001242F7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 74E1A194298CFD8B001242F7 /* FirebaseFirestore */; };
 		74E1A197298CFD8B001242F7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 74E1A196298CFD8B001242F7 /* FirebaseStorage */; };
-		74E1A199298CFE82001242F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74E1A198298CFE82001242F7 /* GoogleService-Info.plist */; };
 		74E1A19C298D0D35001242F7 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1A19B298D0D35001242F7 /* NavigationView.swift */; };
 		74F67CCD298D458B0095D13A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F67CCC298D458B0095D13A /* MapView.swift */; };
 		74F67CCF298D459B0095D13A /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F67CCE298D459B0095D13A /* ChatView.swift */; };
@@ -52,6 +52,7 @@
 		7417096E299D5952002B2CF0 /* UserCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCheck.swift; sourceTree = "<group>"; };
 		74170973299D5F05002B2CF0 /* UsersMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersMapView.swift; sourceTree = "<group>"; };
 		74170975299D6643002B2CF0 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		7466C20E29A26795005F006A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		74811CCD2987E3EA007CFEDE /* Family365.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Family365.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74811CD02987E3EA007CFEDE /* Family365App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family365App.swift; sourceTree = "<group>"; };
 		74811CD22987E3EA007CFEDE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		74811CE72987E3ED007CFEDE /* Family365UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Family365UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74811CEB2987E3ED007CFEDE /* Family365UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family365UITests.swift; sourceTree = "<group>"; };
 		74811CED2987E3ED007CFEDE /* Family365UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family365UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		74E1A198298CFE82001242F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		74E1A19B298D0D35001242F7 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		74F67CCC298D458B0095D13A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		74F67CCE298D459B0095D13A /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 				74135161298A3E18003AE97D /* Views */,
 				74811CD02987E3EA007CFEDE /* Family365App.swift */,
 				74811CD42987E3ED007CFEDE /* Assets.xcassets */,
-				74E1A198298CFE82001242F7 /* GoogleService-Info.plist */,
+				7466C20E29A26795005F006A /* GoogleService-Info.plist */,
 				74811CD62987E3ED007CFEDE /* Preview Content */,
 			);
 			path = Family365;
@@ -325,7 +325,7 @@
 			files = (
 				74811CD82987E3ED007CFEDE /* Preview Assets.xcassets in Resources */,
 				74811CD52987E3ED007CFEDE /* Assets.xcassets in Resources */,
-				74E1A199298CFE82001242F7 /* GoogleService-Info.plist in Resources */,
+				7466C20F29A26795005F006A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
