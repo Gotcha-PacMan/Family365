@@ -13,6 +13,7 @@
 		74170974299D5F05002B2CF0 /* UsersMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74170973299D5F05002B2CF0 /* UsersMapView.swift */; };
 		74170976299D6643002B2CF0 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74170975299D6643002B2CF0 /* UsersViewModel.swift */; };
 		7466C20F29A26795005F006A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7466C20E29A26795005F006A /* GoogleService-Info.plist */; };
+		7466C21129A2D4EC005F006A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466C21029A2D4EC005F006A /* ImagePicker.swift */; };
 		74811CD12987E3EA007CFEDE /* Family365App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74811CD02987E3EA007CFEDE /* Family365App.swift */; };
 		74811CD32987E3EA007CFEDE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74811CD22987E3EA007CFEDE /* LoginView.swift */; };
 		74811CD52987E3ED007CFEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74811CD42987E3ED007CFEDE /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		74170973299D5F05002B2CF0 /* UsersMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersMapView.swift; sourceTree = "<group>"; };
 		74170975299D6643002B2CF0 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		7466C20E29A26795005F006A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7466C21029A2D4EC005F006A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		74811CCD2987E3EA007CFEDE /* Family365.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Family365.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74811CD02987E3EA007CFEDE /* Family365App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family365App.swift; sourceTree = "<group>"; };
 		74811CD22987E3EA007CFEDE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -102,8 +104,8 @@
 			children = (
 				74170972299D5EC2002B2CF0 /* TabBar */,
 				74170970299D5E89002B2CF0 /* Map */,
-				74F67CD0298D45AA0095D13A /* SettingsView.swift */,
-				74F67CCE298D459B0095D13A /* ChatView.swift */,
+				7466C21429A2EC6E005F006A /* Settings */,
+				7466C21529A2EC8E005F006A /* Chat */,
 				74F67CD4298D46230095D13A /* LogView */,
 			);
 			path = Views;
@@ -133,6 +135,22 @@
 				74E1A19B298D0D35001242F7 /* NavigationView.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		7466C21429A2EC6E005F006A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				74F67CD0298D45AA0095D13A /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7466C21529A2EC8E005F006A /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				74F67CCE298D459B0095D13A /* ChatView.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		74811CC42987E3EA007CFEDE = {
@@ -207,6 +225,7 @@
 			children = (
 				74135162298A3E47003AE97D /* RegisterView.swift */,
 				74811CD22987E3EA007CFEDE /* LoginView.swift */,
+				7466C21029A2D4EC005F006A /* ImagePicker.swift */,
 			);
 			path = LogView;
 			sourceTree = "<group>";
@@ -359,6 +378,7 @@
 				74F67CCD298D458B0095D13A /* MapView.swift in Sources */,
 				74E1A19C298D0D35001242F7 /* NavigationView.swift in Sources */,
 				74F67CCF298D459B0095D13A /* ChatView.swift in Sources */,
+				7466C21129A2D4EC005F006A /* ImagePicker.swift in Sources */,
 				74811CD12987E3EA007CFEDE /* Family365App.swift in Sources */,
 				7417096F299D5952002B2CF0 /* UserCheck.swift in Sources */,
 			);

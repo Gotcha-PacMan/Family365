@@ -131,23 +131,23 @@ struct loginView: View {
                        
                 //Look if user is logged in and trigger userIsLoggedIn
                 //if the user are logged in
-                .onAppear(){
+            
+              /*  .onAppear(){
                     Auth.auth().addStateDidChangeListener { auth, user in
                         if user != nil {
                             userIsLoggedIn.toggle()
                         }
                     }
-                }
-         }
-                //End ZStack, here!
+                } */
+            
+         } //End ZStack, here!
                 .padding([ .top,.bottom ], 40)
-        }
-            //End scrollwheel, here!
+            
+        } //End scrollwheel, here!
            .navigationBarHidden(true)
            .ignoresSafeArea()
         
-       }
-            //End NavigationView, here!
+       } //End NavigationView, here!
        /*   .ignoresSafeArea()
             .navigationViewStyle(StackNavigationViewStyle())
     } */

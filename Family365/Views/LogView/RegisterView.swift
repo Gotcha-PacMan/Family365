@@ -7,23 +7,15 @@
 
 import SwiftUI
 import Firebase
+import FirebaseStorage
 
 struct RegisterView: View {
     
     @State private var email = ""
     @State private var password = ""
     
-    class FirebaseManager: NSObject {
-        static let shared = FirebaseManager()
-        let auth: Auth
-        
-        override init() {
-            FirebaseApp.configure()
-            self.auth = Auth.auth()
-            super.init()
-        }
-    }
-    
+    @State var shouldShowImagePicker = false
+
     var body: some View {
       
         ScrollView (showsIndicators: false) {
@@ -46,11 +38,29 @@ struct RegisterView: View {
                     
                     //Account Image
                     Button {
-                        
+                        shouldShowImagePicker.toggle()
                     } label: {
-                        Image(systemName: "person.fill")
-                            .font(.system(size: 64))
-                            .padding()
+                        
+                        VStack {
+                            
+                            if let image = self.image {
+                                //Picked Image
+                                Image(uiImage: image)
+                                    .resizable()
+                                    .frame(width: 150, height: 150)
+                                    .scaledToFill()
+                                    .cornerRadius(90)
+                            } else {
+                                // Default
+                                Image(systemName: "person.fill")
+                                    .font(.system(size: 64))
+                                    .padding()
+                                    .foregroundColor(Color.black)
+                            }
+                            
+                        } // End VStack
+                        .overlay(RoundedRectangle(cornerRadius: 65)
+                                    .stroke(Color.gray, lineWidth: 2))
                     }
                     
                     .padding(.top, 20)
@@ -103,6 +113,10 @@ struct RegisterView: View {
                 } // End VStack
                 .padding (.bottom, 60)
                 
+                .fullScreenCover(isPresented: $shouldShowImagePicker, onDismiss: nil){
+                    ImagePicker(image: $image)
+                }
+                
                 Text(self.statusMessage)
                     .foregroundColor(.red)
                 
@@ -110,13 +124,14 @@ struct RegisterView: View {
             
         } // End Scrollview
         
-        
     }
+    
+    @State var image: UIImage?
     
     @State var statusMessage = ""
     
     func register() {
-        FirebaseManager.shared.auth.createUser(withEmail: email, password: password) { result, error in
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
               if let error = error {
                   print("Failed to create user:", error)
                   self.statusMessage = "Failed to create user: \(error)"
@@ -126,10 +141,54 @@ struct RegisterView: View {
               print("Successfully created \(result?.user.uid ?? "")")
               
               self.statusMessage = "Successfully created \(result?.user.uid ?? "")"
-              
+            
+            self.persistImageToStorage()
+            
           }
       }
+        
+    private func persistImageToStorage() {
+//       let filename = UUID().uuidString
+        guard let uid = Auth.auth().currentUser?.uid
+        else { return }
+        let ref = Storage.storage().reference(withPath: uid)
+        guard let imageData = self.image?.jpegData(compressionQuality: 0.5) else { return }
+        ref.putData(imageData, metadata: nil) {
+            metadata, error in if let error = error {
+                self.statusMessage = "Failed to push up image: \(error)"
+                return
+            }
+            
+            ref.downloadURL { url, error in
+                if let error = error {
+                    self.statusMessage = "Failed to retrieve: \(error)"
+                    return
+                }
+                
+                self.statusMessage = "Sucessfully Stored Image: \(url?.absoluteString ?? "")"
+                
+                guard let url = url else { return }
+                self.storeUserInformation(imageProfileUrl: url)
+                
+            }
+            
+        }
+    }
     
+    private func storeUserInformation(imageProfileUrl: URL) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let userData = ["email": self.email, "uid": uid, "profileImageURL": imageProfileUrl.absoluteString]
+        Firestore.firestore().collection("Users")
+            .document(uid).setData(userData) {
+                error in if let error = error {
+                    print (error)
+                    self.statusMessage = "\(error)"
+                    return
+                }
+                print("Success!!!")
+            }
+        
+    }
 }
 
 struct RegisterView_Previews: PreviewProvider {
