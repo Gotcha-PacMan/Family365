@@ -16,6 +16,7 @@ struct loginView: View {
     @State private var showDetail: Bool = false
     @State private var userIsLoggedIn = false
     @State private var isPresented = false
+    @State var statusMessage = ""
     
     //Custom Color
     struct CustomColor {
@@ -26,7 +27,7 @@ struct loginView: View {
             
             if userIsLoggedIn {
                 //If user is logged in, go to next view
-                NavigationView()
+                NavBar()
             } else {
                 //If not stay on the same view
                 signInView
@@ -35,11 +36,11 @@ struct loginView: View {
         }
     
     var signInView: some View {
-        
-   // NavigationView {
             
-        // Scrollwheel
-        ScrollView (showsIndicators: false){
+    NavigationView {
+        
+    // Scrollwheel
+    ScrollView (showsIndicators: false){
             
         // The overlayView
         ZStack {
@@ -49,7 +50,6 @@ struct loginView: View {
                 .fill(Color.white)
                 .shadow(radius: 50)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .padding(.top, 10)
                 
                 // The verticalView
                 VStack(alignment: .center, spacing : 0 ) {
@@ -115,45 +115,37 @@ struct loginView: View {
                             // Register - button
                             Button("Register Account") {
                                 self.isPresented.toggle()
-                                   // .font(.headline)
-                                   // .foregroundColor(.white)
-                                   // .padding()
-                                   // .frame(width: 300, height: 50)
-                                   // .background(.gray)
-                                   // .cornerRadius(20.0)
                             }
                             .fullScreenCover(isPresented: $isPresented, content: RegisterView.init)
                             .frame(width: 310, height: 60, alignment: .center)
-                            .padding(.top, 20)
+                            .padding()
             
                 } //End VStack here!
-                 .padding (.bottom, 45)
                        
                 //Look if user is logged in and trigger userIsLoggedIn
                 //if the user are logged in
             
-              /*  .onAppear(){
+                .onAppear(){
                     Auth.auth().addStateDidChangeListener { auth, user in
                         if user != nil {
                             userIsLoggedIn.toggle()
                         }
                     }
-                } */
+                } 
             
          } //End ZStack, here!
-                .padding([ .top,.bottom ], 40)
+        .padding(.top, 55)
             
-        } //End scrollwheel, here!
-           .navigationBarHidden(true)
-           .ignoresSafeArea()
-        
-       } //End NavigationView, here!
-       /*   .ignoresSafeArea()
-            .navigationViewStyle(StackNavigationViewStyle())
-    } */
+        } //End scrollwheel
+        .ignoresSafeArea()
+
+       
+       } //End NavigationVieW
+       .navigationBarHidden(true)
+
+    }
     
-    @State var statusMessage = ""
-    
+    // login with auth.firestore
     func login() {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             if let error = error {

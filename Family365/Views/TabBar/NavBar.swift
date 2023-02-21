@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-struct NavigationView: View {
+struct NavBar: View {
     
     var body: some View {
-            
+        
+            // NavBar
             TabView{
                 
+                // NavItems
                 MapView(viewModel: UserViewModel())
                     .tabItem() {
                         Image (systemName: "map.circle")
@@ -39,6 +41,6 @@ struct NavigationView: View {
 
 struct NavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView()
+        NavBar()
     }
 }

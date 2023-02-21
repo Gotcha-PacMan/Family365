@@ -24,7 +24,7 @@
 		74E1A193298CFD8B001242F7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 74E1A192298CFD8B001242F7 /* FirebaseAuth */; };
 		74E1A195298CFD8B001242F7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 74E1A194298CFD8B001242F7 /* FirebaseFirestore */; };
 		74E1A197298CFD8B001242F7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 74E1A196298CFD8B001242F7 /* FirebaseStorage */; };
-		74E1A19C298D0D35001242F7 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1A19B298D0D35001242F7 /* NavigationView.swift */; };
+		74E1A19C298D0D35001242F7 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1A19B298D0D35001242F7 /* NavBar.swift */; };
 		74F67CCD298D458B0095D13A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F67CCC298D458B0095D13A /* MapView.swift */; };
 		74F67CCF298D459B0095D13A /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F67CCE298D459B0095D13A /* ChatView.swift */; };
 		74F67CD1298D45AA0095D13A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F67CD0298D45AA0095D13A /* SettingsView.swift */; };
@@ -65,7 +65,7 @@
 		74811CE72987E3ED007CFEDE /* Family365UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Family365UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74811CEB2987E3ED007CFEDE /* Family365UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family365UITests.swift; sourceTree = "<group>"; };
 		74811CED2987E3ED007CFEDE /* Family365UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family365UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		74E1A19B298D0D35001242F7 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		74E1A19B298D0D35001242F7 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		74F67CCC298D458B0095D13A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		74F67CCE298D459B0095D13A /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		74F67CD0298D45AA0095D13A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		74170972299D5EC2002B2CF0 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				74E1A19B298D0D35001242F7 /* NavigationView.swift */,
+				74E1A19B298D0D35001242F7 /* NavBar.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -376,7 +376,7 @@
 				74811CD32987E3EA007CFEDE /* LoginView.swift in Sources */,
 				74170974299D5F05002B2CF0 /* UsersMapView.swift in Sources */,
 				74F67CCD298D458B0095D13A /* MapView.swift in Sources */,
-				74E1A19C298D0D35001242F7 /* NavigationView.swift in Sources */,
+				74E1A19C298D0D35001242F7 /* NavBar.swift in Sources */,
 				74F67CCF298D459B0095D13A /* ChatView.swift in Sources */,
 				7466C21129A2D4EC005F006A /* ImagePicker.swift in Sources */,
 				74811CD12987E3EA007CFEDE /* Family365App.swift in Sources */,

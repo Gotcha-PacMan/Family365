@@ -18,118 +18,124 @@ struct RegisterView: View {
 
     var body: some View {
       
-        ScrollView (showsIndicators: false) {
+        NavigationView {
         
-            ZStack {
-                
-                // Simple background
-                Rectangle()
-                    .fill(Color.white)
-                    .shadow(radius: 50)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .padding(.top, 10)
-                
-                VStack (alignment: .center, spacing : 0 ) {
-                    
-                    Text("Register Account")
-                        .font(.title).foregroundColor(.black)
-                        .padding(.top, 30)
-                        .padding(.bottom, 20)
-                    
-                    //Account Image
-                    Button {
-                        shouldShowImagePicker.toggle()
-                    } label: {
-                        
-                        VStack {
-                            
-                            if let image = self.image {
-                                //Picked Image
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .frame(width: 150, height: 150)
-                                    .scaledToFill()
-                                    .cornerRadius(90)
-                            } else {
-                                // Default
-                                Image(systemName: "person.fill")
-                                    .font(.system(size: 64))
-                                    .padding()
-                                    .foregroundColor(Color.black)
-                            }
-                            
-                        } // End VStack
-                        .overlay(RoundedRectangle(cornerRadius: 65)
-                                    .stroke(Color.gray, lineWidth: 2))
-                    }
-                    
-                    .padding(.top, 20)
-                    .padding(.bottom, 20)
-
-                    // Mail
-                    Image("logicon")
-                        .frame(maxWidth: 350, maxHeight: 50, alignment: .leading)
-                        .listRowInsets(EdgeInsets())
-                    
-                    TextField("Email", text: self.$email)
-                        .padding()
-                        .autocapitalization(.none)
-                        .keyboardType(.default)
-                        .disableAutocorrection(true)
-                        .frame(width: 350, height: 60)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 15)
-                                .stroke(.black, lineWidth: 2)
-                                .frame(width: 350, height: 60)
-                            )
-                        .padding(.bottom, 10)
-                    
-                    // Password
-                    Image("passLock")
-                        .frame(maxWidth: 350, maxHeight: 50, alignment: .leading)
-                        .listRowInsets(EdgeInsets())
-                    
-                    SecureField("Password", text: self.$password)
-                        .padding()
-                        .frame(width: 350, height: 60)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 15)
-                                .stroke(.black, lineWidth: 2)
-                                .frame(width: 350, height: 60)
-                            )
-                    
-                    Button(action: {register()}) {
-                        Text("Register Account")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(width: 300, height: 50)
-                            .background(.gray)
-                            .cornerRadius(20.0)
-                    }
-                    .frame(width: 310, height: 60, alignment: .center)
-                    .padding(.top, 40)
-                    
-                } // End VStack
-                .padding (.bottom, 60)
-                
-                .fullScreenCover(isPresented: $shouldShowImagePicker, onDismiss: nil){
-                    ImagePicker(image: $image)
-                }
-                
-                Text(self.statusMessage)
-                    .foregroundColor(.red)
-                
-            } // End ZStack
+            ScrollView (showsIndicators: false) {
             
-        } // End Scrollview
-        
+                ZStack {
+                    
+                    // Simple background
+                    Rectangle()
+                        .fill(Color.white)
+                        .shadow(radius: 50)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .padding(.top, 10)
+                    
+                    VStack (alignment: .center, spacing : 0 ) {
+                        
+                        Text("Register Account")
+                            .font(.title).foregroundColor(.black)
+                            .padding(.top, 30)
+                            .padding(.bottom, 20)
+                        
+                        //Account Image Picker
+                        Button {
+                            shouldShowImagePicker.toggle()
+                        } label: {
+                            VStack {
+                                if let image = self.image {
+                                    //Picked Image
+                                    Image(uiImage: image)
+                                        .resizable()
+                                        .frame(width: 150, height: 150)
+                                        .scaledToFill()
+                                        .cornerRadius(90)
+                                } else {
+                                    // Default
+                                    Image(systemName: "person.fill")
+                                        .font(.system(size: 64))
+                                        .padding()
+                                        .foregroundColor(Color.black)
+                                }
+                                
+                            } // End VStack
+                            .overlay(RoundedRectangle(cornerRadius: 65)
+                                        .stroke(Color.gray, lineWidth: 2))
+                        }
+                        
+                        .padding(.top, 20)
+                        .padding(.bottom, 20)
+
+                        // Mail
+                        Image("logicon")
+                            .frame(maxWidth: 350, maxHeight: 50, alignment: .leading)
+                            .listRowInsets(EdgeInsets())
+                        
+                        TextField("Email", text: self.$email)
+                            .padding()
+                            .autocapitalization(.none)
+                            .keyboardType(.default)
+                            .disableAutocorrection(true)
+                            .frame(width: 350, height: 60)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 15)
+                                    .stroke(.black, lineWidth: 2)
+                                    .frame(width: 350, height: 60)
+                                )
+                            .padding(.bottom, 10)
+                        
+                        // Password
+                        Image("passLock")
+                            .frame(maxWidth: 350, maxHeight: 50, alignment: .leading)
+                            .listRowInsets(EdgeInsets())
+                        
+                        SecureField("Password", text: self.$password)
+                            .padding()
+                            .frame(width: 350, height: 60)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 15)
+                                    .stroke(.black, lineWidth: 2)
+                                    .frame(width: 350, height: 60)
+                                )
+                        
+                        // Register button
+                        Button(action: {register()}) {
+                            Text("Register Account")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding()
+                                .frame(width: 300, height: 50)
+                                .background(.gray)
+                                .cornerRadius(20.0)
+                        }
+                        .frame(width: 310, height: 60, alignment: .center)
+                        .padding(.top, 40)
+                        
+                    } // End VStack
+                    .padding (.bottom, 30)
+                    
+                    .fullScreenCover(isPresented: $shouldShowImagePicker, onDismiss: nil){
+                        ImagePicker(image: $image)
+                    }
+                    
+                    Text(self.statusMessage)
+                        .foregroundColor(.red)
+                    
+                } // End ZStack
+                
+            } // End Scrollview
+
+        } // End NavigationView
+        .ignoresSafeArea(.all)
+            
     }
+    
     
     @State var image: UIImage?
     
     @State var statusMessage = ""
     
+    // Register function
     func register() {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
               if let error = error {
@@ -147,8 +153,8 @@ struct RegisterView: View {
           }
       }
         
+    // Put Image-picked in fire.Storage
     private func persistImageToStorage() {
-//       let filename = UUID().uuidString
         guard let uid = Auth.auth().currentUser?.uid
         else { return }
         let ref = Storage.storage().reference(withPath: uid)
@@ -175,6 +181,7 @@ struct RegisterView: View {
         }
     }
     
+    // Registered UserInformation store it in fire.database
     private func storeUserInformation(imageProfileUrl: URL) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let userData = ["email": self.email, "uid": uid, "profileImageURL": imageProfileUrl.absoluteString]

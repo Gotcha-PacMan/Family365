@@ -10,25 +10,43 @@ import Firebase
 
 struct SettingsView: View {
     
+    @State private var isDarkMode = false
+    
     var body: some View {
-        
-        ZStack {
+            
+        NavigationView {
+            
+            // Theme Changer
+            VStack {
+                
+                Toggle(isOn: $isDarkMode) {
+                    Text("Dark Mode")
+                }
+                .padding()
+                Spacer()
+                
+            }
+            .background(isDarkMode ? Color.black : Color.white)
+            .preferredColorScheme(isDarkMode ? .dark : .light)
             
             // Logout - button
-            Button(action: logoutCurrentUser) {
-                Text("Logout")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(width: 300, height: 50)
-                    .background(.gray)
-                    .cornerRadius(20.0)
-            }
-        
-            .frame(width: 310, height: 60, alignment: .center)
-            .padding(.top, 20)
+            ZStack {
+                Button(action: logoutCurrentUser) {
+                    Text("Logout")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(width: 300, height: 50)
+                        .background(.gray)
+                        .cornerRadius(20.0)
+                } //
             
-        } //End ZStack
+                .frame(width: 310, height: 60, alignment: .center)
+                .padding(.top, 20)
+                
+            } //End ZStack
+            
+        } // End NavView
         
     }
     

@@ -78,10 +78,12 @@ final class UserMapViewCoordinate: NSObject, MKMapViewDelegate {
         marker.markerTintColor = userAnnotations.isOpen ? .red : .gray
         marker.canShowCallout = true
         
+        // Depend on status, show which that icon on the right side
         let calloutButton = UIButton(frame: CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0))
         calloutButton.setImage(UIImage(systemName: userAnnotations.isOpen ? "phone.fill" : "exclamationmark.triangle"), for: .normal)
         marker.rightCalloutAccessoryView = calloutButton
         
+        // Name of the place
         let nameLabel = UILabel()
         nameLabel.text = userAnnotations.name
         marker.detailCalloutAccessoryView = nameLabel
