@@ -15,37 +15,40 @@ struct SettingsView: View {
     var body: some View {
             
         NavigationView {
-            
-            // Theme Changer
             VStack {
-                
-                Toggle(isOn: $isDarkMode) {
-                    Text("Dark Mode")
+                // Theme Changer
+                VStack {
+                    
+                    Toggle(isOn: $isDarkMode) {
+                        Text("Dark Mode")
+                    }
+                    .padding()
+                    Spacer()
+                    
                 }
-                .padding()
-                Spacer()
+                .background(isDarkMode ? Color.black : Color.white)
+                .preferredColorScheme(isDarkMode ? .dark : .light)
                 
-            }
-            .background(isDarkMode ? Color.black : Color.white)
-            .preferredColorScheme(isDarkMode ? .dark : .light)
-            
-            // Logout - button
-            ZStack {
-                Button(action: logoutCurrentUser) {
-                    Text("Logout")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(width: 300, height: 50)
-                        .background(.gray)
-                        .cornerRadius(20.0)
-                } //
-            
-                .frame(width: 310, height: 60, alignment: .center)
-                .padding(.top, 20)
+                // Logout - button
+                ZStack {
+                    Button(action: logoutCurrentUser) {
+                        Text("Logout")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 300, height: 50)
+                            .background(.gray)
+                            .cornerRadius(20.0)
+                    } //
                 
-            } //End ZStack
-            
+                    .frame(width: 310, height: 60, alignment: .center)
+                    .padding()
+                    Spacer()
+                    
+                } //End ZStack
+                
+            } // End VStack
+                
         } // End NavView
         
     }

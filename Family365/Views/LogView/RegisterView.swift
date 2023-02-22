@@ -109,8 +109,10 @@ struct RegisterView: View {
                                 .cornerRadius(20.0)
                         }
                         .frame(width: 310, height: 60, alignment: .center)
-                        .padding(.top, 40)
+                        .padding()
                         
+                        
+
                     } // End VStack
                     .padding (.bottom, 30)
                     

@@ -117,6 +117,7 @@ struct loginView: View {
                                 self.isPresented.toggle()
                             }
                             .fullScreenCover(isPresented: $isPresented, content: RegisterView.init)
+                    
                             .frame(width: 310, height: 60, alignment: .center)
                             .padding()
             
@@ -134,11 +135,9 @@ struct loginView: View {
                 } 
             
          } //End ZStack, here!
-        .padding(.top, 55)
             
         } //End scrollwheel
         .ignoresSafeArea()
-
        
        } //End NavigationVieW
        .navigationBarHidden(true)
